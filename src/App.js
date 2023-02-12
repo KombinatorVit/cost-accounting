@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import CostItem from "./components/CostItem";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const costs = [{
+        date: new Date(2023, 2, 12),
+        description: 'Macbook',
+        amount: 999.99
+    },
+        {
+            date: new Date(2023, 2, 12),
+            description: 'Mac',
+            amount: 9.99
+        },
+        {
+            date: new Date(2023, 2, 12),
+            description: 'Book',
+            amount: 99.99
+        }
+    ]
+
+
+    return (
+        <div>
+            Kiss Kiss
+            <CostItem costs={costs}/>
+            <CostItem costs={costs}/>
+            <CostItem costs={costs}/>
+        </div>
+    );
 }
 
 export default App;
