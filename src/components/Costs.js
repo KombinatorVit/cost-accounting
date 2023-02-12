@@ -1,0 +1,16 @@
+import React from 'react';
+import './Costs.css'
+import CostItem from "./CostItem";
+import Card from "./Card";
+
+const Costs = ({costs}) => {
+    return (
+        <Card className={'costs'}>
+            <CostItem costs={costs}/>
+            <CostItem costs={costs}/>
+            <CostItem costs={costs}/>
+        </Card>
+    );
+};
+
+export default Costs;
