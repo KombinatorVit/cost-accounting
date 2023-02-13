@@ -11,20 +11,23 @@ function App() {
     },
         {
             id: 'c2',
-            date: new Date(2023, 2, 12),
+            date: new Date(2021, 2, 12),
             name: 'Mac',
             amount: 9.99
         },
         {
             id: 'c3',
 
-            date: new Date(2023, 2, 12),
+            date: new Date(2022, 2, 12),
             name: 'Book',
             amount: 99.99
         }
     ])
 
-    console.log(costs)
+
+
+
+
 
     function onSaveCostData(objData) {
         setCosts([...costs, objData])

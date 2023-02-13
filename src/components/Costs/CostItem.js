@@ -1,24 +1,18 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import './CostItem.css'
 import CostDate from "./CostDate";
 import Card from "../UI/Card";
 
-const CostItem = ({costs}) => {
-
+const CostItem = (props) => {
+    console.log(props)
 
     return (
         <Card className={'cost-item'}>
-            {costs.map((el => {
-                return (
-                    <Fragment key={el.id}>
-                        <CostDate date={el.date}/>
-                        <div className={'cost-item__description'}>
-                            <h2>{el.name}</h2>
-                            <div className={'cost-item__price'}>${el.amount}</div>
-                        </div>
-                    </Fragment>
-                )
-            }))}
+            <CostDate date={props.const.date}/>
+            <div className={'cost-item__description'}>
+                <h2>{props.const.name}</h2>
+                <div className={'cost-item__price'}>${props.const.amount}</div>
+            </div>
         </Card>
     );
 };
