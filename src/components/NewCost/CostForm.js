@@ -2,10 +2,11 @@ import React, {useState} from 'react';
 import './CostForm.css'
 
 
-const CostForm = () => {
+const CostForm = (props) => {
     const [name, setName] = useState('')
     const [amount, setAmount] = useState(0)
     const [date, setDate] = useState('2022-01-01')
+
 
     function nameChangeHandler(e) {
 
@@ -17,11 +18,27 @@ const CostForm = () => {
     }
 
     function dateChangeHandler(e) {
-        setDate(+e.currentTarget.value)
+        setDate(e.currentTarget.value)
+    }
+
+    function onSubmitHandler(e) {
+        e.preventDefault()
+        const costData = {
+            name,
+            amount,
+            date: new Date(date)
+        }
+
+        props.onSaveCostData(costData)
+
+        setName('')
+        setAmount(0)
+        setDate('')
+
     }
 
     return (
-        <form>
+        <form onSubmit={onSubmitHandler}>
             <div className={'new-cost__controls'}>
                 <div className={'new-cost__control label'}>
 

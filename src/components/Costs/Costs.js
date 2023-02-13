@@ -9,6 +9,7 @@ const Costs = ({costs}) => {
             <CostItem costs={costs}/>
             <CostItem costs={costs}/>
             <CostItem costs={costs}/>
+x
         </Card>
     );
 };

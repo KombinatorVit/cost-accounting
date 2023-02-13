@@ -10,10 +10,10 @@ const CostItem = ({costs}) => {
         <Card className={'cost-item'}>
             {costs.map((el => {
                 return (
-                    <Fragment key={el.description}>
+                    <Fragment key={el.id}>
                         <CostDate date={el.date}/>
                         <div className={'cost-item__description'}>
-                            <h2>{el.description}</h2>
+                            <h2>{el.name}</h2>
                             <div className={'cost-item__price'}>${el.amount}</div>
                         </div>
                     </Fragment>
